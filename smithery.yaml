@@ -1,0 +1,22 @@
+# Smithery configuration for openrouter-zero-mcp
+# https://smithery.ai/docs/config
+
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    required:
+      - openrouterApiKey
+    properties:
+      openrouterApiKey:
+        type: string
+        title: "OpenRouter API Key"
+        description: "Your OpenRouter API Key (starts with sk-or-v1-...)"
+  commandFunction: |-
+    (config) => ({
+      command: "node",
+      args: ["./server.js"],
+      env: {
+        OPENROUTER_API_KEY: config.openrouterApiKey
+      }
+    })

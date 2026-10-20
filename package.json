@@ -1,0 +1,39 @@
+{
+  "name": "openrouter-zero-mcp",
+  "version": "1.0.0",
+  "description": "Ultra-lightweight, zero-dependency OpenRouter MCP server. Sub-30ms startup, native JSON-RPC 2.0 stdio, multi-model inference (DeepSeek, Llama, Claude, Gemini) for Claude Desktop, Cursor, and AI coding agents.",
+  "main": "server.js",
+  "bin": {
+    "openrouter-zero-mcp": "./server.js"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test.mjs"
+  },
+  "keywords": [
+    "mcp",
+    "openrouter",
+    "model-context-protocol",
+    "claude-desktop",
+    "cursor",
+    "deepseek",
+    "gemini",
+    "llama",
+    "ai-agent",
+    "smithery",
+    "glama"
+  ],
+  "author": "Gabriel Toledo (@Gabrielrtads)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Gabrielrtads/openrouter-zero-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Gabrielrtads/openrouter-zero-mcp/issues"
+  },
+  "homepage": "https://github.com/Gabrielrtads/openrouter-zero-mcp#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
