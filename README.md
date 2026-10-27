@@ -1,13 +1,23 @@
 # ⚡ OpenRouter Zero MCP (`openrouter-zero-mcp`)
 
-[![Smithery](https://smithery.ai/badge/@Gabrielrtads/openrouter-zero-mcp)](https://smithery.ai/server/@Gabrielrtads/openrouter-zero-mcp)
-[![Glama](https://glama.ai/mcp/servers/badge?id=openrouter-zero-mcp)](https://glama.ai/mcp/servers)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
+> **The Fastest, Lightest OpenRouter MCP Server for AI Agents.**  
+> *(Zero third-party dependencies, <30ms startup, multi-model inference for DeepSeek, Claude, Gemini & Llama).*
+
+[![skills.sh compatible](https://img.shields.io/badge/skills.sh-openrouter--zero--mcp-6366f1?style=for-the-badge)](https://skills.sh)
 [![Zero-Dependency](https://img.shields.io/badge/Dependencies-Zero-emerald?style=for-the-badge)](#)
 [![Startup](https://img.shields.io/badge/Startup-<30ms-brightgreen?style=for-the-badge)](#)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
+[![Smithery](https://smithery.ai/badge/@Gabrielrtads/openrouter-zero-mcp)](https://smithery.ai/server/@Gabrielrtads/openrouter-zero-mcp)
+[![Glama](https://glama.ai/mcp/servers/badge?id=openrouter-zero-mcp)](https://glama.ai/mcp/servers)
+[![GitHub stars](https://img.shields.io/github/stars/Gabrielrtads/openrouter-zero-mcp?style=social)](https://github.com/Gabrielrtads/openrouter-zero-mcp/stargazers)
 
-> **The fastest, lightest OpenRouter MCP server.**  
-> Built with **zero third-party dependencies** in pure Node.js. Boots in under **30ms**, uses ~15MB of RAM, and supports multi-model inference (DeepSeek, Claude, Gemini, Llama), catalog search, and credits monitoring on **Claude Desktop**, **Cursor**, **Antigravity**, and **Windsurf**.
+```bash
+# ⚡ 1-Click Install via skills.sh (Claude Code / Codex / Antigravity):
+npx skills add Gabrielrtads/openrouter-zero-mcp
+
+# Or install automatically via Smithery for Claude Desktop:
+npx -y @smithery/cli install @Gabrielrtads/openrouter-zero-mcp --client claude
+```
 
 ---
 
@@ -19,16 +29,6 @@
 | **Startup Latency** | 1.2s - 3.5s | **< 30ms** instant boot |
 | **Memory Footprint** | ~120MB+ | **~15MB** |
 | **JSON-RPC Spec** | Often crashes on notifications | **100% Spec-Compliant** (Handles notifications correctly) |
-
----
-
-## 🚀 1-Click Install via Smithery
-
-Install automatically into Claude Desktop with Smithery:
-
-```bash
-npx -y @smithery/cli install @Gabrielrtads/openrouter-zero-mcp --client claude
-```
 
 ---
 
@@ -112,6 +112,19 @@ Provisions, lists, or revokes API keys via the OpenRouter Management API.
 
 ---
 
-## 📄 License
+<div align="center">
 
-MIT License — Created with ❤️ by [Gabriel Toledo (@Gabrielrtads)](https://github.com/Gabrielrtads).
+### ⭐ Impressed with OpenRouter Zero?
+If this MCP server saved your tokens or sped up your workflow, please star the repository!  
+It helps other autonomous agent developers discover the project.
+
+[![Star on GitHub](https://img.shields.io/github/stars/Gabrielrtads/openrouter-zero-mcp?style=social)](https://github.com/Gabrielrtads/openrouter-zero-mcp/stargazers)
+
+---
+
+**Built with pride by [Gabriel Toledo (@Gabrielrtads)](https://github.com/Gabrielrtads)**  
+*Creator of [Barber.fi](https://painel.barberfi.com.br), `vibe-design-studio`, `sta`, `kage-bunshin`, and `agent-log`.*
+
+Licensed under [MIT](LICENSE).
+
+</div>
