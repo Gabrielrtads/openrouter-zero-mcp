@@ -15,6 +15,14 @@
 
 const DEFAULT_BASE_URL = "https://openrouter.ai/api/v1";
 
+// 🏆 Free Coding Podium (Priority 1: Poolside, Fallback 1: Cohere, Fallback 2: Nemotron 550B, Fallback 3: Gemma)
+const DEFAULT_FREE_PODIUM = [
+  "poolside/laguna-s-2.1:free",
+  "cohere/north-mini-code:free",
+  "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "google/gemma-4-31b-it:free"
+];
+
 function getApiKey() {
   return (process.env.OPENROUTER_API_KEY || "").trim();
 }
@@ -238,7 +246,20 @@ async function handleChatCompletion(args) {
     throw new Error("OPENROUTER_API_KEY environment variable is not configured.");
   }
 
-  const model = args.model || "google/gemini-2.5-flash";
+  let model = args.model;
+  let models = args.models;
+
+  if (model === "free" || model === "auto" || (!model && !models)) {
+    model = DEFAULT_FREE_PODIUM[0];
+    models = DEFAULT_FREE_PODIUM;
+  } else if (Array.isArray(args.fallbacks)) {
+    models = [model, ...args.fallbacks];
+  } else if (!model && Array.isArray(models) && models.length > 0) {
+    model = models[0];
+  } else if (!model) {
+    model = "google/gemini-2.5-flash";
+  }
+
   let messages = args.messages;
 
   if (!messages || !messages.length) {
@@ -253,6 +274,10 @@ async function handleChatCompletion(args) {
     model,
     messages,
   };
+
+  if (models && Array.isArray(models)) {
+    body.models = models;
+  }
 
   if (args.temperature !== undefined) body.temperature = args.temperature;
   if (args.max_tokens !== undefined) body.max_tokens = args.max_tokens;
